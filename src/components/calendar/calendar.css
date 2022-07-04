@@ -1,0 +1,84 @@
+:root {
+  /* --background: #b3e5fc;
+  --border: #bbb;
+  --hover: #eee; */
+
+  --background: #090909;
+  --border: #bbb;
+  --hover: #eee;
+}
+
+.calendar > h2 {
+  text-align: center;
+}
+
+.calendar > div > div {
+  padding: 5px;
+}
+
+.calendar > .days {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: right;
+}
+
+.calendar > .days .day {
+  background: var(--background);
+  color: white;
+  text-align: center;
+}
+
+.calendar > .dates {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.calendar > .dates .date {
+  border-top: 1px solid var(--border);
+  text-align: right;
+  height: 100px;
+  transition: background 0.2s;
+}
+
+.calendar > .dates .date:hover {
+  background: var(--hover);
+}
+
+.calendar > .dates .date p {
+  margin: 0;
+  padding: 0;
+}
+
+.calendar > .dates .date .events {
+  margin: 0;
+  padding: 0 5px 0 0;
+  max-height: 72px;
+  overflow-y: auto;
+}
+
+.calendar > .dates .date .events .event {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: white;
+  border-radius: 5px;
+  margin: 2px;
+  text-align: center;
+}
+
+.events::-webkit-scrollbar {
+  width: 5px;
+}
+
+.events::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.events::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
